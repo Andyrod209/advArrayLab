@@ -180,24 +180,38 @@ let dishes = [
 // console.log(id2servings);
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
-function serveringEvenNum(){
+// function serveringEvenNum(){
+
+//     let results = dishes.filter(function(el){
+//         if(el.servings % 2 == 0){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return results
+// }
+
+// let evenServings = serveringEvenNum();
+// console.log(evenServings)
+//5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
+//Filter
+function ingreTomatoChesse(){
 
     let results = dishes.filter(function(el){
-        if(el.servings % 2 == 0){
+        if(el.ingredients[0] == 'tomato' && el.ingredients[1] == 'cheese'){
             return true;
         }
         else{
             return false;
         }
-    })
+    });
     return results
 }
 
-let evenServings = serveringEvenNum();
-console.log(evenServings)
-//5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
-//Filter
-
+let tomatoChesse = ingreTomatoChesse();
+console.log(tomatoChesse)
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Pizza', 'Spaghetti', ...]
 //Map
 // BONUS: (come back to this after finishing all)

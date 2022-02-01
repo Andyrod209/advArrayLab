@@ -197,26 +197,40 @@ let dishes = [
 // console.log(evenServings)
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
-function ingreTomatoChesse(){
+// function ingreTomatoChesse(){
 
-    let results = dishes.filter(function(el){
-        if(el.ingredients[0] == 'tomato' && el.ingredients[1] == 'cheese'){
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
-    return results
-}
+//     let results = dishes.filter(function(el){
+//         if(el.ingredients[0] == 'tomato' && el.ingredients[1] == 'cheese'){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     });
+//     return results
+// }
 
-let tomatoChesse = ingreTomatoChesse();
-console.log(tomatoChesse)
+// let tomatoChesse = ingreTomatoChesse();
+// console.log(tomatoChesse)
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Pizza', 'Spaghetti', ...]
 //Map
+function nameOfCuisineTypes(){
+    
+    let results = dishes.map(function(el){
+        return el.name
+    })
+    return results;
+}
+
+console.log(nameOfCuisineTypes());
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
+function noDups(){
 
+    let results = dishes.filter(function(el){
+        if(el)
+    })
+}
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
 
